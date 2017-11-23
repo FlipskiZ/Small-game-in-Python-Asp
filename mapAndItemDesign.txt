@@ -1,0 +1,68 @@
+Tiles:
+tileInfo = [
+['.', "It's empty space.", True],
+['#', "It's a wall.", False],
+['+', "It's a closed door.", False],
+['/', "It's an open door.", True],
+['*', "It's a small fireplace.", False],
+['+', "It's a closed door, with a small round hole under the handle.", False],
+['+', "It's a closed door, with a small squared hole under the handle.", False],
+['+', "It's a closed door, with a small hole in an 8 shape under the handle.", False],
+['T', "It's a wooden pillar, probably from the same tree as the log.", False]
+] #Info about the tiles, like their tile character, description, and walkable status.
+
+player starts at X: 1 Y: 0
+item 0 at X: 2 Y: 0
+item 1 at X: 0 Y: 2
+item 4 at x: 2 Y: 2
+item ? at x: 15 Y: 0 (End item)
+
+mapArrayString = "
+4001100000000110
+0001100000000111
+0001100000000117
+1111100000000116
+0000100000000115
+2111100100000000
+0000001010000000
+0000010801000000
+0000001010000000
+0000001010000000
+0000000000000000
+5111111711111116
+0001000000001000
+0001000000001000
+0001000000001000
+0001000000001000"
+
+mapArray = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+itemArrayStructure = [itemName, itemName] #The item's ID is it's array position.
+itemArray = ["name", "something"]
+
+itemDict = {"index": [itemID, posX, posY], "index2": [itemID, posX, posY]} #The dictionary acts as a dynamic array.
+
+playerInventory = [itemID, itemID, itemID, -1, -1] #The player's inventory has 5 spaces. -1 means no item
+
+itemArray = [
+["axe", '%', "It's a woodcutting axe."],
+["log", 'l', "It's a log presumebly taken from a dead tree."],
+["stick", '|', "It's a long stick, harvested from the remains of a chopped up log."],
+["torch", '!', "It's a stick with the fireplace stuff at its end."],
+["mysterious barrel", 'O', "It's a barrel with a piece of paper, the letters are worn and hard to read, it reads.. 'D..ER: G.N..WD.R'."]
+] #A list of the item names. The item's ID is it's position in the array.
